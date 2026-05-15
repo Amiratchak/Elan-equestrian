@@ -28,7 +28,7 @@
 
 </div>
 
-   <section id="about" class="hidden">
+   <section id="about" class="fade-in">
 
         <h2>About Élan Equestrian</h2>
 
@@ -46,13 +46,15 @@
 
     </section>
 
+<section class="horse-section horse-reveal">
 
-    <section class="image-section">
+    <img src="images/horse.jpg" class="horse-image">
 
-    </section>
+</section>
+    
 
 
-<section id="services" class="services hidden">
+<section id="services" class="services fade-in">
 
     <h2>What We Offer</h2>
 
@@ -92,16 +94,16 @@
 
     </div>
 
-</section>
+
 
     </section>
 
 
-    <section id="contact" class="hidden">
+    <section id="contact" class="fade-in">
 
         <h2>Lesson Iquiriries</h2>
 
-        <form>
+        <form id="contact-form">
 
             <input type="text" placeholder="Full Name">
 
@@ -120,38 +122,7 @@
     <p>© 2026 Élan Equestrian by Amira</p>
 
 </footer>
-<script>
-
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-
-    event.preventDefault();
-
-    alert("Thank you for your inquiry. Élan Equestrian will contact you soon.");
-
-});
-
-</script>
-<script>
-
-const hiddenElements = document.querySelectorAll(".hidden");
-
-window.addEventListener("scroll", () => {
-
-    hiddenElements.forEach((element) => {
-
-        const elementTop = element.getBoundingClientRect().top;
-
-        if (elementTop < window.innerHeight - 100) {
-
-            element.classList.add("show");
-
-        }
-
-    });
-
-});
-
-</script>
+<script src="script.js"></script>
 </body>
 
 </html>
